@@ -35,7 +35,7 @@ call refreshenv
 
 :: Install Fabric
 echo Installing Fabric...
-go install github.com/danielmiessler/fabric@latest
+go install github.com/platformalchemist/Fabric@latest
 
 :: Run Fabric setup
 echo Running Fabric setup...
@@ -43,7 +43,7 @@ fabric --setup
 
 :: Install yt helper
 echo Installing yt helper...
-go install github.com/danielmiessler/yt@latest
+go install github.com/platformalchemist/yt@latest
 
 :: Prompt user for YouTube API Key
 set /p YOUTUBE_API_KEY=Enter your YouTube API Key (press Enter to skip): 

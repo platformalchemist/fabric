@@ -9,10 +9,10 @@ Fabric is graciously supported by…
 
 ![Static Badge](https://img.shields.io/badge/mission-human_flourishing_via_AI_augmentation-purple)
 <br />
-![GitHub top language](https://img.shields.io/github/languages/top/danielmiessler/fabric)
-![GitHub last commit](https://img.shields.io/github/last-commit/danielmiessler/fabric)
+![GitHub top language](https://img.shields.io/github/languages/top/platformalchemist/Fabric)
+![GitHub last commit](https://img.shields.io/github/last-commit/platformalchemist/Fabric)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/danielmiessler/fabric)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/platformalchemist/Fabric)
 
 <div align="center">
 <h4><code>fabric</code> is an open-source framework for augmenting humans using AI.</h4>
@@ -177,23 +177,23 @@ To install Fabric, you can use the latest release binaries or install it from th
 
 #### Windows
 
-`https://github.com/danielmiessler/fabric/releases/latest/download/fabric-windows-amd64.exe`
+`https://github.com/platformalchemist/Fabric/releases/latest/download/fabric-windows-amd64.exe`
 
 #### macOS (arm64)
 
-`curl -L https://github.com/danielmiessler/fabric/releases/latest/download/fabric-darwin-arm64 > fabric && chmod +x fabric && ./fabric --version`
+`curl -L https://github.com/platformalchemist/Fabric/releases/latest/download/fabric-darwin-arm64 > fabric && chmod +x fabric && ./fabric --version`
 
 #### macOS (amd64)
 
-`curl -L https://github.com/danielmiessler/fabric/releases/latest/download/fabric-darwin-amd64 > fabric && chmod +x fabric && ./fabric --version`
+`curl -L https://github.com/platformalchemist/Fabric/releases/latest/download/fabric-darwin-amd64 > fabric && chmod +x fabric && ./fabric --version`
 
 #### Linux (amd64)
 
-`curl -L https://github.com/danielmiessler/fabric/releases/latest/download/fabric-linux-amd64 > fabric && chmod +x fabric && ./fabric --version`
+`curl -L https://github.com/platformalchemist/Fabric/releases/latest/download/fabric-linux-amd64 > fabric && chmod +x fabric && ./fabric --version`
 
 #### Linux (arm64)
 
-`curl -L https://github.com/danielmiessler/fabric/releases/latest/download/fabric-linux-arm64 > fabric && chmod +x fabric && ./fabric --version`
+`curl -L https://github.com/platformalchemist/Fabric/releases/latest/download/fabric-linux-arm64 > fabric && chmod +x fabric && ./fabric --version`
 
 ### Using package managers
 
@@ -218,7 +218,7 @@ To install Fabric, [make sure Go is installed](https://go.dev/doc/install), and 
 
 ```bash
 # Install Fabric directly from the repo
-go install github.com/danielmiessler/fabric/cmd/fabric@latest
+go install github.com/platformalchemist/Fabric/cmd/fabric@latest
 ```
 
 ### Environment Variables
@@ -428,7 +428,7 @@ pipx uninstall fabric
 # Clear any old Fabric aliases
 (check your .bashrc, .zshrc, etc.)
 # Install the Go version
-go install github.com/danielmiessler/fabric/cmd/fabric@latest
+go install github.com/platformalchemist/Fabric/cmd/fabric@latest
 # Run setup for the new version. Important because things have changed
 fabric --setup
 ```
@@ -440,7 +440,7 @@ Then [set your environmental variables](#environment-variables) as shown above.
 The great thing about Go is that it's super easy to upgrade. Just run the same command you used to install it in the first place and you'll always get the latest version.
 
 ```bash
-go install github.com/danielmiessler/fabric/cmd/fabric@latest
+go install github.com/platformalchemist/Fabric/cmd/fabric@latest
 ```
 
 ### Shell Completions
@@ -725,7 +725,7 @@ This will create a PDF file named `output.pdf` in the current directory.
 To install `to_pdf`, install it the same way as you install Fabric, just with a different repo name.
 
 ```bash
-go install github.com/danielmiessler/fabric/cmd/to_pdf@latest
+go install github.com/platformalchemist/Fabric/cmd/to_pdf@latest
 ```
 
 Make sure you have a LaTeX distribution (like TeX Live or MiKTeX) installed on your system, as `to_pdf` requires `pdflatex` to be available in your system's PATH.
@@ -741,7 +741,7 @@ See [the Create Coding Feature Pattern README](./data/patterns/create_coding_fea
 Install it first using:
 
 ```bash
-go install github.com/danielmiessler/fabric/cmd/code_helper@latest
+go install github.com/platformalchemist/Fabric/cmd/code_helper@latest
 ```
 
 ## pbpaste

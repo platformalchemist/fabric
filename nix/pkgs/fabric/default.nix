@@ -31,7 +31,7 @@ buildGoApplication {
 
   meta = with lib; {
     description = "Fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere";
-    homepage = "https://github.com/danielmiessler/fabric";
+    homepage = "https://github.com/platformalchemist/Fabric";
     license = licenses.mit;
     platforms = platforms.all;
     mainProgram = "fabric";

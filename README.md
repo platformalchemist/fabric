@@ -206,7 +206,12 @@ alias fabric='fabric-ai'
 
 #### macOS (Homebrew)
 
-`brew install fabric-ai`
+Install via Homebrew by adding our tap and then installing the package:
+
+```bash
+brew tap platformalchemist/fabric
+brew install fabric-ai
+```
 
 #### Arch Linux (AUR)
 

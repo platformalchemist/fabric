@@ -1,0 +1,46 @@
+name: Update Homebrew Formula
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  update-formula:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Compute SHA256
+        id: sha
+        run: |
+          tag=${{ github.event.release.tag_name }}
+          url="https://github.com/${{ github.repository }}/archive/refs/tags/${tag}.tar.gz"
+          curl -L "$url" -o src.tar.gz
+          sha=$(sha256sum src.tar.gz | awk '{print $1}')
+          echo "sha=$sha" >> $GITHUB_ENV
+          echo "url=$url" >> $GITHUB_ENV
+          echo "tag=$tag" >> $GITHUB_ENV
+
+      - name: Update formula
+        run: |
+          sed -i "s|url \".*\"|url \"$url\"|" Formula/fabric-ai.rb
+          sed -i "s/sha256 \".*\"/sha256 \"$sha\"/" Formula/fabric-ai.rb
+
+      - name: Commit formula update
+        run: |
+          git add Formula/fabric-ai.rb
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update Homebrew formula for $tag"
+            git push
+          fi
+
